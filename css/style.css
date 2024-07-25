@@ -1,0 +1,143 @@
+*{
+padding : 0;
+margin : 0;
+box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background:linear-gradient(30deg,red,aqua);
+    display: flex;
+}
+.player{
+    padding: 30px;
+    color: #fff;
+    margin: auto;
+    width: 25%;
+    height: auto;
+    border-radius: 30px;
+    background-color: rgba(255,255,255,0.18);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    text-align: center;
+}
+.player h1{
+    margin-bottom: 30px;
+    font-size: 2.2rem;
+    width: 100%;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #fff;
+}
+.player img{
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    padding: 10px;
+    margin-bottom: 30px;
+    
+}
+.imageRotate{
+    animation: imageRotate1 2s linear infinite;
+}
+@keyframes imageRotate1 {
+    100%{
+        rotate: 360deg;
+    }
+}
+.text h2, p, small{
+    margin-bottom: 15px;
+}
+.timeDiv{
+    margin-bottom: 10px;
+    margin-top: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.progressBar{
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    position: relative;
+    cursor: pointer;
+}
+.progressLine{
+    position: absolute;
+    left: 0;
+    width: 30%;
+    height: 100%;
+    background-color: rgb(31, 147, 193);
+}
+.progressLine::after{
+    position: absolute;
+    content: '';
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color:  rgb(31, 147, 193);
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.controls{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    align-items: center;
+    gap: 50px;
+}
+.controls button{
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+.controls button i{
+    font-size: 1.2rem;
+}
+.controls button:nth-child(2) i{
+    background-color: rgb(31, 147, 193);
+    width: 50px;
+    height: 50px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    font-size: 2rem;
+    transition-duration: 200ms;
+}
+.controls button:nth-child(2):hover i{
+    scale: .9;
+}
+.repeatLike{
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+.repeatLike button{
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.repeatLike button i {
+    font-size: 1.5rem;
+}
+.repeatMode{
+    color: #0000ff;
+}
+.likedMode{
+    color: #0000ff;
+}
+@media (max-width : 768px) {
+    .player{
+        width: 90%;
+    }
+}

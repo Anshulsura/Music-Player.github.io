@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+      integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="player">
+      <audio src="./Music/music 1.mp3" hidden class="audio_"></audio>
+      <h1>Music Player</h1>
+      <img src="./assets/Music.jpg" alt="" id="imageId" />
+
+      <div class="text">
+        <h2 class="titleTextdata">
+          <marquee behavior="" direction="">Music Title</marquee>
+        </h2>
+        <p>Artist name</p>
+        <small>Album name</small>
+      </div>
+
+      <div class="timeDiv">
+        <span class="currentTime">00:00</span>
+        <span class="duration">00:00</span>
+      </div>
+      <div class="progressBar">
+        <div class="progressLine"></div>
+      </div>
+
+      <div class="repeatLike">
+        <button class="repeat">
+          <i class="fa fa-repeat"></i>
+        </button>
+        <button class="like">
+          <i class="fa fa-heart"></i>
+        </button>
+      </div>
+
+      <div class="controls">
+        <button class="prev">
+          <i class="fa fa-backward" aria-hidden="true"></i>
+        </button>
+        <button class="play">
+          <i class="fa fa-play-circle" aria-hidden="true"></i>
+        </button>
+        <button class="next">
+          <i class="fa fa-forward" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+
+    <script src="./js/vanilla-tilt.js"></script>
+    <script src="./js/music.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
